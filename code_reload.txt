@@ -2,8 +2,8 @@
 
 clear
 cd ~
-rm -rf Medical-Record
-git clone https://github.com/AdityaMitra5102/Medical-Record
+rm -rf FIDO-Payments
+git clone https://github.com/AdityaMitra5102/FIDO-Payments
 mkdir medrecords
 cd medrecords
 mkdir appfiles
