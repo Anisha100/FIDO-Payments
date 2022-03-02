@@ -207,13 +207,13 @@ def getFileListFromUser(user):
 	try:
 		op='\n'
 		op=op+'<tr>\n'
-		op=op+'<th>Test name</th>\n'
-		op=op+'<th>Test date</th>\n'
-		op=op+'<th>Uploader</th>\n'
-		op=op+'<th>Link</th>\n'
+		op=op+'<th>From</th>\n'
+		op=op+'<th>To</th>\n'
+		op=op+'<th>Amount</th>\n'
+		op=op+'<th>Date</th>\n'
 		op=op+'</tr>\n'
-		command= 'SELECT test, dt, uploader, filename FROM [File] where username=?'
-		cursor.execute(command,user)
+		command= 'SELECT username, uploader, filename, dt FROM [File] where username=? or uploader=?'
+		cursor.execute(command,user,user)
 		retValue=cursor.fetchall()
 		cursor.commit()
 		print(retValue)
