@@ -184,6 +184,8 @@ def inittag():
 		exp2=int(exp)
 		if exp2>curbal:
 			return render_template("error.html",reason="Insufficient Funds")
+		if exp2<1:
+			return render_template("error.html", reason="Amount must be positive")
 		tagid=uuid.uuid4()
 		addTag(uname,tagid,iname,exp)
 		#eml=getEmailFromUsername(uname)
@@ -230,10 +232,12 @@ def dashboard():
 			tok=request.cookies.get("token")
 			print('Token',tok)
 			sender=getUsernameFromTag(tok)
+			if sender=="00":
+				return render_template('error.html', reason="Some error has occurred")
 			receiver=uname
 			print(sender,receiver)
 			if sender==receiver:
-				return render_template('error.html', "Receiver and sender cannot be same")
+				return render_template('error.html', reason="Receiver and sender cannot be same")
 			amt=int(getExpiryFromTag(tok))
 			deleteTag(tok)
 			dtm=datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
