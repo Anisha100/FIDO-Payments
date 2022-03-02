@@ -234,7 +234,7 @@ def dashboard():
 		except:
 			pass
 		res=make_response(render_template("dashboard_admin.html", name=name))
-		res.set_cookie("receive",false)
+		res.set_cookie("receive","false")
 		res.set_cookie("token","null")
 		return res
 	return redirect("/logout")
