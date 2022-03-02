@@ -1,0 +1,15 @@
+#Copy these lines and paste it on cloud VM ssh terminal to reload code from this repository.
+
+clear
+cd ~
+rm -rf Medical-Record
+git clone https://github.com/AdityaMitra5102/Medical-Record
+mkdir medrecords
+cd medrecords
+mkdir appfiles
+cd ~
+chmod -R 777 medrecords
+sudo rm /var/log/apache2/error.log
+sudo rm /var/log/apache2/access.log
+sudo service apache2 restart
+
