@@ -226,7 +226,7 @@ def dashboard():
 			tok=request.cookies.get("token")
 			sender=getUsernameFromTag(tok)
 			receiver=uname
-			amt=getExpiryFromTag(tok)
+			amt=int(getExpiryFromTag(tok))
 			deleteTag(tok)
 			addFile(sender,"",str(datetime.now),receiver,"")
 			sendamt=int(getNameFromUsername(sender))
