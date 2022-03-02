@@ -399,7 +399,7 @@ def inittagread():
 def readtag():
 	getUserCount()
 	tag=request.args.get('tagid')
-	#token=tag[4:].strip()
+	token=tag[4:].strip()
 	#if not tokenValid(token):
 	#	return render_template("error.html", reason="Token expired")
 	now=datetime.now()
