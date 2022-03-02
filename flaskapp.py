@@ -679,14 +679,14 @@ def decr(tok):
 	return f1.decrypt(tok.encode()).decode()
 
 def get_location(ip):
-	response = requests.get("https://ipgeolocation.abstractapi.com/v1/?api_key=62cddacb34cb4dbfb0fc5cba0e329039&ip_address="+ip)
-	json_data = json.loads(response.text)
-	city=json_data['city']
-	country=json_data['country']
-	k="City: "+city+"\n"
-	k=k+"Country: "+country+"\n"
-	k=k+"IP Address: "+ip
-	return k
+	#response = requests.get("https://ipgeolocation.abstractapi.com/v1/?api_key=62cddacb34cb4dbfb0fc5cba0e329039&ip_address="+ip)
+	#json_data = json.loads(response.text)
+	#city=json_data['city']
+	#country=json_data['country']
+	#k="City: "+city+"\n"
+	#k=k+"Country: "+country+"\n"
+	#k=k+"IP Address: "+ip
+	return ""
 
 def save_key(uname, credentials):
 	fln=getFileFromUsername(uname)
