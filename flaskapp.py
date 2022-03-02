@@ -215,10 +215,14 @@ def dashboard():
 		type=request.cookies.get('type')
 		uname=getIdFromCookie(request.cookies.get("id"))
 		name=getNameFromUsername(uname)
+		rec=''
 		if name=="00":
 			return redirect("/logout")
 		try:
 			rec=request.cookies.get("receive")
+		except: 
+			pass
+		if rec=='true':
 			tok=request.cookies.get("token")
 			sender=getUsernameFromTag(tok)
 			receiver=uname
@@ -233,8 +237,6 @@ def dashboard():
 			changeName(recamt,receiver)
 			print('change',sendamt,sender)
 			print('change',recamt,receiver)
-		except:
-			pass
 		res=make_response(render_template("dashboard_admin.html",uname=uname, name=name))
 		res.set_cookie("receive","false")
 		res.set_cookie("token","null")
