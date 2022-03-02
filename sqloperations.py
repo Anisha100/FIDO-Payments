@@ -144,7 +144,7 @@ def deleteTag(tagid):
 		
 def createFileTable():
 	try:
-		cursor.execute("CREATE TABLE [File](username VARCHAR(50), test VARCHAR(50), dt VARCHAR(50), uploader VARCHAR(50), filename VARCHAR(50) UNIQUE)")
+		cursor.execute("CREATE TABLE [File](username VARCHAR(50), test VARCHAR(50), dt VARCHAR(50), uploader VARCHAR(50), filename VARCHAR(50))")
 		cursor.commit()
 	except:
 		pass
