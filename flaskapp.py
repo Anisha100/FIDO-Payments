@@ -227,7 +227,7 @@ def dashboard():
 			sender=getUsernameFromTag(tok)
 			receiver=uname
 			amt=getExpiryFromTag(tok)
-			deleteTag(token)
+			deleteTag(tok)
 			addFile(sender,"",str(datetime.now),receiver,"")
 			sendamt=int(getNameFromUsername(sender))
 			sendamt=sendamt-amt
