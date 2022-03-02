@@ -78,8 +78,9 @@
         <div class="container">
           <article>
             <h1>Temporary Tokens</h1>
-            <button class="btn btn-lg" id="scanButton" {{scanbuttonparam}}>Scan</button>
-            <button class="btn btn-lg" id="writeButton" {{writebuttonparam}}>Write</button>
+            <button class="btn btn-lg" id="scanButton" {{scanbuttonparam}}>Scan NFC</button>
+            <button class="btn btn-lg" id="writeButton" {{writebuttonparam}}>Write to NFC</button>
+            <button class="btn btn-lg" id="shareButton" {{writebuttonparam}}>Share</button>
 
           </article>
         </div>
@@ -194,7 +195,7 @@
             console.log( "delay" );
           }, 1000 ); //delay is in milliseconds 
 
-          alert( "Temporary tag provisioned" );
+          alert( "Token written" );
           window.location.href = "/";
         } catch ( error ) {
           alert( "> Error" );
@@ -203,6 +204,25 @@
       } );
 
     </script>
+    
+    <script>
+      const shareData= {
+        title: 'Money transfer',
+        url: 'https://{{url}}/readtag?tagid=tag_{{token}}'
+      }
+      shareButton.addEventListener('click',async() => {
+        try {
+          await navigator.share(shareData)
+          window.location.href = "/";
+        }
+        catch(err)
+        {
+          alert("> Error");
+          window.location.href = "/";
+        }
+      });
+    </script>
+    
   </BODY>
 
 </HTML>
