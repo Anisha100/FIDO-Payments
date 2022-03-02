@@ -224,6 +224,7 @@ def dashboard():
 			pass
 		if rec=='true':
 			tok=request.cookies.get("token")
+			print('Token',tok)
 			sender=getUsernameFromTag(tok)
 			receiver=uname
 			print(sender,receiver)
