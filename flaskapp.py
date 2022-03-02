@@ -360,12 +360,6 @@ def loginotpinp():
 	else:
 		return render_template("error.html", reason="Incorrect link opened")
 	
-@app.route("/auditlog", methods=["GET","POST"])
-def auditlog():
-	getUserCount()
-	audit()
-	return redirect("/")
-
 @app.route("/api/register/beginplatform", methods=["GET","POST"])
 def register_begin_platform():
     encuname=decr(request.args.get('uname')).split('$')
