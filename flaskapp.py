@@ -232,9 +232,11 @@ def dashboard():
 			sender=getUsernameFromTag(tok)
 			receiver=uname
 			print(sender,receiver)
+			if sender==receiver:
+				return render_template('error.html', "Receiver and sender cannot be same")
 			amt=int(getExpiryFromTag(tok))
 			deleteTag(tok)
-			dtm=str(datetime.now)
+			dtm=datetime.now.strftime("%m/%d/%Y, %H:%M:%S")
 			amt2=str(amt)
 			print(sender,"",dtm,receiver,amt2)
 			addFile(sender,"",dtm,receiver,amt2)
