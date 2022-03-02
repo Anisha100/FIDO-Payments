@@ -233,7 +233,7 @@ def dashboard():
 			changeName(recamt,receiver)
 		except:
 			pass
-		res=make_response(render_template("dashboard_admin.html", name=name))
+		res=make_response(render_template("dashboard_admin.html",uname=uname, name=name))
 		res.set_cookie("receive","false")
 		res.set_cookie("token","null")
 		return res
