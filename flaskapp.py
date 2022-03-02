@@ -190,7 +190,7 @@ def inittag():
 		addTag(uname,tagid,iname,exp)
 		#eml=getEmailFromUsername(uname)
 		#sendEmailTokenAdd(eml,iname,exp)
-		return render_template("webnfc.html", scanbuttonparam="hidden", writebuttonparam="", token=tagid)
+		return render_template("webnfc.html", scanbuttonparam="hidden", writebuttonparam="", url=url,token=tagid)
 	return redirect("/")
 	
 @app.route("/fidoreg", methods=["GET","POST"])
