@@ -410,7 +410,7 @@ def readtag():
 	#	return render_template("error.html", reason="Token expired")
 	now=datetime.now()
 	date_time = now.strftime("%m/%d/%Y-%H:%M:%S")
-	tok=encr(token+' '+request.remote_addr+' '+date_time)
+	#tok=encr(token+' '+request.remote_addr+' '+date_time)
 	resp=make_response(redirect("/initlogin"))
 	resp.set_cookie("id",tok, max_age=3600)
 	resp.set_cookie("type","user")
