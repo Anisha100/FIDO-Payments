@@ -231,6 +231,8 @@ def dashboard():
 			recamt=recamt+amt
 			changeName(sendamt,sender)
 			changeName(recamt,receiver)
+			print('change',sendamt,sender)
+			print('change',recamt,receiver)
 		except:
 			pass
 		res=make_response(render_template("dashboard_admin.html",uname=uname, name=name))
