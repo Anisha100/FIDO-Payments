@@ -23,7 +23,7 @@ import os
 import uuid
 import re
 
-url="medical-record.centralindia.cloudapp.azure.com"
+url="payments.centralindia.cloudapp.azure.com"
 filepth='/home/vm_user/medrecords/'
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
