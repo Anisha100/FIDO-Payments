@@ -180,6 +180,9 @@ def inittag():
 		uname=getIdFromCookie(request.cookies.get("id"))
 		exp=request.form['exp'].strip()
 		iname=request.form['iname'].strip()
+		curbal=int(getNameFromUsername(uname))
+		if exp>uname:
+			return render_template("error.html",reason="Insufficient Funds")
 		tagid=uuid.uuid4()
 		addTag(uname,tagid,iname,exp)
 		#eml=getEmailFromUsername(uname)
