@@ -216,7 +216,7 @@ def dashboard():
 		uname=getIdFromCookie(request.cookies.get("id"))
 		name=getNameFromUsername(uname)
 		rec=''
-		if name=="00":
+		if uname=="00":
 			return redirect("/logout")
 		try:
 			rec=request.cookies.get("receive")
@@ -239,6 +239,7 @@ def dashboard():
 			changeName(recamt,receiver)
 			print('change',sendamt,sender)
 			print('change',recamt,receiver)
+		name=getNameFromUsername(uname)
 		res=make_response(render_template("dashboard_admin.html",uname=uname, name=name))
 		res.set_cookie("receive","false")
 		res.set_cookie("token","null")
