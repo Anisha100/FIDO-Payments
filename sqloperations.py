@@ -222,7 +222,7 @@ def getFileListFromUser(user):
 			op=op+'<td>'+i[0]+'</td>\n'
 			op=op+'<td>'+i[1]+'</td>\n'
 			op=op+'<td>'+i[2]+'</td>\n'
-			op=op+'<td><a class="btn" href="/downloadfile?name='+i[3]+'">Download</a></td>\n'
+			op=op+'<td>'+i[3]+'</td>\n'
 			op=op+"</tr>\n"
 		op=op+"\n"
 		if len(retValue) ==0:
@@ -231,72 +231,6 @@ def getFileListFromUser(user):
 	except:
 		return "Error"
 		
-def createDigestTable():
-	try:
-		cursor.execute("CREATE TABLE [Msgdigest](filename VARCHAR(50), dgst VARCHAR(100))")
-		cursor.commit()
-	except:
-		pass
-
-def addDigest(filename, dgst):
-	try:
-		command = 'INSERT INTO [Msgdigest] VALUES (?,?)'	
-		cursor.execute(command,filename,dgst)
-		cursor.commit()
-	except:
-		createDigestTable()
-		try:
-			command = 'INSERT INTO [Msgdigest] VALUES (?,?)'	
-			cursor.execute(command,filename,dgst)
-			cursor.commit()
-		except:
-			pass
-	
-def getDigestFromFile(filename):
-	try:
-		command ='SELECT dgst FROM [Msgdigest] WHERE filename=?'
-		cursor.execute(command,filename)
-		retValue=cursor.fetchone()[0]
-		cursor.commit()
-		return retValue
-	except:
-		return "00"
-	
-def createAuditTable():
-	try:
-		cursor.execute("CREATE TABLE [Adlog](tstp VARCHAR(50), username VARCHAR(50), test VARCHAR(50), dt VARCHAR(50), nm VARCHAR(50), addr VARCHAR(20), filename VARCHAR(50), mode VARCHAR(50), oper VARCHAR(50))")
-		cursor.commit()
-	except:
-		pass
-	
-def addAuditRecord(username, test, dt, nm, addr, filename,mode,oper):
-	try:
-		command = 'INSERT INTO [Adlog] VALUES (?,?,?,?,?,?,?,?,?)'
-		tstp=str(datetime.now())
-		cursor.execute(command,tstp,username,test,dt,nm,addr,filename,mode,oper)
-		cursor.commit()
-	except:
-		createAuditTable()
-		try:
-			command = 'INSERT INTO [Adlog] VALUES (?,?,?,?,?,?,?,?,?)'
-			tstp=str(datetime.now())
-			cursor.execute(command,tstp,username,test,dt,nm,addr,filename,mode,oper)
-			cursor.commit()
-		except:
-			pass
-	
-def readAudit():
-	k="Timestamp, Username, Test name, Date, Operator, IP Address, Filename, Mode, Operation\n"
-	command= 'SELECT * FROM [Adlog]'
-	cursor.execute(command)
-	retValue=cursor.fetchall()
-	cursor.commit()
-	for i in retValue:
-		for x in range (0,9):
-			k=k+i[x]+", "
-		k=k[:-2]
-		k=k+"\n"
-	return k
 		
 def createAuthTable():
 	try:
@@ -363,24 +297,11 @@ def resetDb():
 		cursor.commit()
 	except:
 		pass
-	try:
-		command='DROP table [Adlog];'
-		cursor.execute(command)
-		cursor.commit()
-	except:
-		pass
-	try:
-		command='DROP table [Msgdigest];'
-		cursor.execute(command)
-		cursor.commit()
-	except:
-		pass
+	
 
 def createAllTables():
 	createUserTable()
 	createTagsTable()
 	createFileTable()
 	createAuthTable()
-	createAuditTable()
-	createDigestTable()
 	
