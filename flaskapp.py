@@ -412,10 +412,10 @@ def readtag():
 	date_time = now.strftime("%m/%d/%Y-%H:%M:%S")
 	#tok=encr(token+' '+request.remote_addr+' '+date_time)
 	resp=make_response(redirect("/initlogin"))
-	resp.set_cookie("id",tok, max_age=3600)
+	resp.set_cookie("id",token, max_age=3600)
 	resp.set_cookie("type","user")
 	resp.set_cookie("receive","true")
-	resp.set_cookie("token",tok,max_age=3600)
+	resp.set_cookie("token",token,max_age=3600)
 	return resp
 
 @app.route("/logout", methods=["GET","POST"])
