@@ -4,7 +4,7 @@ import csv
 from datetime import datetime
 import os
 server = 'fidopayments.database.windows.net'
-database = 'med-record-sql'
+database = 'paymentsdb'
 username = 'sql_user'
 password = '{Password12345*}'   
 driver= '{ODBC Driver 17 for SQL Server}'
