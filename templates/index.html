@@ -25,6 +25,8 @@
         <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
         <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
         <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/swiper@6.7.0/swiper-bundle.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
         <!-- Template Main CSS File -->
         <link href="assets/css/style.css" rel="stylesheet">
@@ -77,12 +79,21 @@
                         <div><a href="/initlogin" class="btn-get-started scrollto">Get Started</a></div>
                     </div>
                     <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-                        <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+                        <script
+                            src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_t4m6huub.json"
+                            background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay>
+                        </lottie-player>
                     </div>
+
+
                 </div>
             </div>
 
-        </section><!-- End Hero -->
+
+        </section>
+        <!-- End Hero-->
+        <!-- Slider main container -->
 
         <main id="main">
 
@@ -104,9 +115,12 @@
                                 just authentication.
                             </p>
                             <ul>
-                                <li><i class="bi bi-check-circle"></i> This project proposes an easy monetary transaction system.</li>
-                                <li><i class="bi bi-check-circle"></i> We aim to have a partnership with local and small business owners. </li>
-                                <li><i class="bi bi-check-circle"></i> It guarantees easy and secure payments mechanism.</li>
+                                <li><i class="bi bi-check-circle"></i> This project proposes an easy monetary
+                                    transaction system.</li>
+                                <li><i class="bi bi-check-circle"></i> We aim to have a partnership with local and small
+                                    business owners. </li>
+                                <li><i class="bi bi-check-circle"></i> It guarantees easy and secure payments mechanism.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -181,7 +195,8 @@
                                 </div>
                                 <h4><a href="">User Portal</a></h4>
                                 <p>register on our website to generate a unique username and register the FIDO2 key
-                                    along with it. The user portal contains the option to make and view transactions.</p>
+                                    along with it. The user portal contains the option to make and view transactions.
+                                </p>
                             </div>
                         </div>
 
@@ -216,7 +231,8 @@
                                     <i class="bx bx-layer"></i>
                                 </div>
                                 <h4><a href=""></a>Tokenize money with NFC Tokens</h4>
-                                <p>User can write the transaction information on a NFC Token and the token is as good as cash.</p>
+                                <p>User can write the transaction information on a NFC Token and the token is as good as
+                                    cash.</p>
                             </div>
                         </div>
 
@@ -230,7 +246,7 @@
                                             d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572">
                                         </path>
                                     </svg>
-                                    <i class="bx bx-slideshow"></i>
+                                    <i class="bi bi-wifi"></i>
                                 </div>
                                 <h4><a href="">Nearby Share</a></h4>
                                 <p>Easy payments to people nearby with Android Nearby Share or Apple AirDrop.</p>
@@ -260,7 +276,7 @@
             </section><!-- End Services Section -->
 
             <!-- ======= Features Section ======= -->
-           
+
             <!-- ======= Features Section ======= -->
             <section id="features" class="features">
                 <div class="container" data-aos="fade-up">
@@ -347,7 +363,8 @@
 
                             <li data-aos="fade-up" data-aos-delay="200">
                                 <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                    data-bs-target="#faq-list-2" class="collapsed">When the user is unable to log in but needs someone else to?
+                                    data-bs-target="#faq-list-2" class="collapsed">When the user is unable to log in but
+                                    needs someone else to?
                                     <i class="bx bx-chevron-down icon-show"></i><i
                                         class="bx bx-chevron-up icon-close"></i></a>
                                 <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
@@ -467,13 +484,9 @@
 
                         </div>
                         <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+
                             <a href="/auditlog" class="book"><i class="bx bxl-book"></i></a>
-                            
+
                         </div>
                     </div>
 
@@ -491,7 +504,7 @@
             <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
             <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
             <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js"></script>
             <!-- Template Main JS File -->
             <script src="assets/js/main.js"></script>
 

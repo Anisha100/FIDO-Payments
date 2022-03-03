@@ -47,7 +47,7 @@
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav id="navbar" class="navbar">
-          
+
         </nav><!-- .navbar -->
 
       </div>
@@ -105,13 +105,7 @@
             </div>
 
           </div>
-          <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          </div>
+
         </div>
 
       </div>
@@ -133,30 +127,30 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-      fetch( '/api/register/begin?uname={{encuname}}', {
+      fetch('/api/register/begin?uname={{encuname}}', {
         method: 'POST',
-      } ).then( function ( response ) {
-        if ( response.ok ) return response.arrayBuffer();
-        throw new Error( 'Error getting registration data!' );
-      } ).then( CBOR.decode ).then( function ( options ) {
-        return navigator.credentials.create( options );
-      } ).then( function ( attestation ) {
-        return fetch( '/api/register/complete?uname={{encuname}}', {
+      }).then(function (response) {
+        if (response.ok) return response.arrayBuffer();
+        throw new Error('Error getting registration data!');
+      }).then(CBOR.decode).then(function (options) {
+        return navigator.credentials.create(options);
+      }).then(function (attestation) {
+        return fetch('/api/register/complete?uname={{encuname}}', {
           method: 'POST',
           headers: { 'Content-Type': 'application/cbor' },
-          body: CBOR.encode( {
-            "attestationObject": new Uint8Array( attestation.response.attestationObject ),
-            "clientDataJSON": new Uint8Array( attestation.response.clientDataJSON ),
-          } )
-        } );
-      } ).then( function ( response ) {
+          body: CBOR.encode({
+            "attestationObject": new Uint8Array(attestation.response.attestationObject),
+            "clientDataJSON": new Uint8Array(attestation.response.clientDataJSON),
+          })
+        });
+      }).then(function (response) {
         var stat = response.ok ? 'successful' : 'unsuccessful';
-        alert( 'Registration ' + stat);
-      }, function ( reason ) {
-        alert( reason );
-      } ).then( function () {
+        alert('Registration ' + stat);
+      }, function (reason) {
+        alert(reason);
+      }).then(function () {
         window.location = '/';
-      } );
+      });
     </script>
 
   </body>
