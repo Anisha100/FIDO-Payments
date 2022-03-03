@@ -61,11 +61,7 @@ def index():
 	k=getUserCount()
 	return render_template("index.html",ucount=k)
     
-@app.route("/reboot")
-def rebt():
-	reboot()
-	return ('Rebooting')
-
+    
 @app.route("/signup")
 def signup():
 	return render_template("signup.html")
