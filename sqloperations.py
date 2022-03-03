@@ -221,7 +221,7 @@ def getFileListFromUser(user):
 			op=op+'<tr>\n'
 			op=op+'<td>'+i[0]+'</td>\n'
 			op=op+'<td>'+i[1]+'</td>\n'
-			op=op+'<td>₹'+i[2]+'</td>\n'
+			op=op+'<td>'+u'\u20B9'+i[2]+'</td>\n'
 			op=op+'<td>'+i[3]+'</td>\n'
 			op=op+"</tr>\n"
 		op=op+"\n"
