@@ -1,167 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
   <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dtox</title>
 
-    <title>Sign in - FIDO Payments</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <script src="/cbor.js"></script>
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet">
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/bootstrap.min.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="assets/plugins/themify-icons/themify-icons.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="assets/plugins/slick/slick.css">
+    <!-- venobox popup -->
+    <link rel="stylesheet" href="assets/plugins/Venobox/venobox.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="assets/plugins/aos/aos.css">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
+    <!-- Main Stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Medical Record - v4.7.0
-  * Template URL: https://bootstrapmade.com/Medical Record-free-skin-bootstrap-3/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!--Favicon-->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
   </head>
 
   <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top header-inner-pages">
-      <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="/">FIDO Payments</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav id="navbar" class="navbar">
-         
-
-          
-        </nav><!-- .navbar -->
-
-      </div>
-    </header><!-- End Header -->
-
-    <main id="main">
-
-      <!-- ======= Breadcrumbs ======= -->
-      <section class="breadcrumbs">
-        <div class="container">
-
-          <div class="d-flex justify-content-between align-items-center">
-            <h2>Passwordless Authentication</h2>
-            <ol>
-              <li><a href="/">Home</a></li>
-              <li>Passwordless login</li>
-            </ol>
-          </div>
-
-        </div>
-      </section><!-- End Breadcrumbs -->
-
-      <section class="inner-page">
-        <div class="container">
-          <article>
-            <h1>Tap the card or authenticate device now...</h1>
-            <p>Click here to cancel</p>
-
-
-            <div>
-              <a href="/" class="btn-3">Cancel</a>
-
-            </div>
-
-          </article>
-        </div>
-      </section>
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-
+    <!-- navigation -->
+    <section class="fixed-top navigation">
       <div class="container">
-
-        <div class="copyright-wrap d-md-flex py-4">
-          <div class="me-md-auto text-center text-md-start">
-            <div class="copyright">
-              &copy; Copyright <strong><span>FIDO Payments</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-              Developed by <a href="http://github.com/AdityaMitra5102">Aditya Mitra</a>,
-              <a href="http://github.com/theseregrets"> Rishita Shaw</a>, and <a
-                href="http://github.com/anisha100">Anisha Ghosh</a>
-            </div>
-
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/">
+            <h3>FIDO Payments</h3>
+          </a>
+          <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navbar -->
+          <div class="collapse navbar-collapse text-center" id="navbar">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="#feature">Feature</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/inittagread">Receive money</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/clearcookies">Clear Username</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/inintlogin">Login</a>
+              </li>
+            </ul>
+            <a class="btn btn-primary ml-lg-3 primary-shadow" href="/signup">Sign Up</a></a>
           </div>
-          <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          </div>
-        </div>
-
+        </nav>
       </div>
-    </footer><!-- End Footer -->
+    </section>
+    <!-- /navigation -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-    <div id="preloader"></div>
+    <!-- about us -->
+    <section class="section-lg about pb-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="section-title">Passwordless Authentication</h2>
+          </div>
+          <div class="col-lg-12 mb-100">
+            <strong>Tap the card or authenticate device now...</stronf>
+              <p>Click here to cancel</p>
+              <div>
+                <a href="/" class="btn btn-secondary">Cancel</a>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+              </div>
+          </div>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+        </div>
+      </div>
+      <!-- background shapes -->
+      <img src="assets/images/background-shape/green-dot.png" alt="background-shape"
+        class="about-bg-1 up-down-animation">
+      <img src="assets/images/background-shape/blue-dot.png" alt="background-shape"
+        class="about-bg-2 left-right-animation">
+      <img src="assets/images/background-shape/green-half-cycle.png" alt="background-shape"
+        class="about-bg-3 up-down-animation">
+      <img src="assets/images/background-shape/seo-ball-1.png" alt="background-shape"
+        class="about-bg-4 left-right-animation">
+      <img src="assets/images/background-shape/team-bg-triangle.png" alt="background-shape"
+        class="about-bg-5 up-down-animation">
+      <img src="assets/images/background-shape/service-half-cycle.png" alt="background-shape"
+        class="about-bg-6 left-right-animation">
+    </section>
+    <!-- /about us -->
+
+
+
+
+
+    <!-- footer -->
+    <footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+            <!-- logo -->
+            <a href="index.html">
+              <img class="img-fluid" src="assets/images/logo.png" alt="logo">
+            </a>
+          </div>
+          <!-- footer menu -->
+          <nav class="col-lg-8 align-self-center mb-5">
+            <ul class="list-inline text-lg-right text-center footer-menu">
+              <li class="list-inline-item active"><a href="index.html">Home</a></li>
+              <li class="list-inline-item"><a class="page-scroll" href="#feature">Feature</a></li>
+              <li class="list-inline-item"><a href="about.html">About</a></li>
+              <li class="list-inline-item"><a class="page-scroll" href="#team">Team</a></li>
+              <li class="list-inline-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
+              <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- footer social icon -->
+          <nav class="col-12">
+            <ul class="list-inline text-lg-right text-center social-icon">
+              <li class="list-inline-item">
+                <a class="facebook" href="#"><i class="ti-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="black" href="#"><i class="ti-github"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <!-- /footer -->
+
+    <!-- jQuery -->
+    <script src="assets/plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="assets/plugins/slick/slick.min.js"></script>
+    <!-- venobox -->
+    <script src="assets/plugins/Venobox/venobox.min.js"></script>
+    <!-- aos -->
+    <script src="assets/plugins/aos/aos.js"></script>
+    <!-- Main Script -->
+    <script src="assets/js/script.js"></script>
 
 
     <script>
-      fetch( '/api/authenticate/begin?token={{tok}}', {
+      fetch('/api/authenticate/begin?token={{tok}}', {
         method: 'POST',
-      } ).then( function ( response ) {
-        if ( response.ok ) return response.arrayBuffer();
-        throw new Error( 'No credential available to authenticate!' );
-      } ).then( CBOR.decode ).then( function ( options ) {
-        return navigator.credentials.get( options );
-      } ).then( function ( assertion ) {
-        return fetch( '/api/authenticate/complete?token={{tok}}', {
+      }).then(function (response) {
+        if (response.ok) return response.arrayBuffer();
+        throw new Error('No credential available to authenticate!');
+      }).then(CBOR.decode).then(function (options) {
+        return navigator.credentials.get(options);
+      }).then(function (assertion) {
+        return fetch('/api/authenticate/complete?token={{tok}}', {
           method: 'POST',
           headers: { 'Content-Type': 'application/cbor' },
-          body: CBOR.encode( {
-            "credentialId": new Uint8Array( assertion.rawId ),
-            "authenticatorData": new Uint8Array( assertion.response.authenticatorData ),
-            "clientDataJSON": new Uint8Array( assertion.response.clientDataJSON ),
-            "signature": new Uint8Array( assertion.response.signature )
-          } )
-        } )
-      } ).then( function ( response ) {
+          body: CBOR.encode({
+            "credentialId": new Uint8Array(assertion.rawId),
+            "authenticatorData": new Uint8Array(assertion.response.authenticatorData),
+            "clientDataJSON": new Uint8Array(assertion.response.clientDataJSON),
+            "signature": new Uint8Array(assertion.response.signature)
+          })
+        })
+      }).then(function (response) {
         var stat = response.ok ? 'successful' : 'unsuccessful';
         //alert( 'Authentication ' + stat);
         window.location = response.ok ? '/signin?token={{tok}}' : '/loginotp?uname={{uname}}';
-      }, function ( reason ) {
+      }, function (reason) {
         //alert( reason );
         window.location = '/loginotp?uname={{uname}}';
-      } ); 
+      }); 
     </script>
 
   </body>
