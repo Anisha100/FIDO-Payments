@@ -212,7 +212,7 @@ def getFileListFromUser(user):
 		op=op+'<th>Amount</th>\n'
 		op=op+'<th>Date</th>\n'
 		op=op+'</tr>\n'
-		command= 'SELECT username, uploader, filename, dt FROM [File] where username=? or uploader=?'
+		command= 'SELECT username, uploader, filename, dt FROM [File] where username=? or uploader=? ORDER BY dt DESC'
 		cursor.execute(command,user,user)
 		retValue=cursor.fetchall()
 		cursor.commit()
