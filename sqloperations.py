@@ -3,7 +3,7 @@ from io import StringIO
 import csv
 from datetime import datetime
 import os
-server = 'fidopayments.database.windows.net'
+server = 'fidopayments.privatelink.database.windows.net'
 database = 'paymentsdb'
 username = 'sql_user'
 password = '{Password12345*}'   
