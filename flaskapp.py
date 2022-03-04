@@ -234,14 +234,17 @@ def dashboard():
 			print('Token',tok)
 			sender=getUsernameFromTag(tok)
 			if sender=="00":
-				return render_template('error.html', reason="Some error has occurred")
+				resp=render_template('error.html', reason="Some error has occurred")
+				resp.set_cookies('rec','false')
+				resp.set_cookies('token','null')
+				return resp
 			receiver=uname
 			print(sender,receiver)
 			if sender==receiver:
 				return render_template('error.html', reason="Receiver and sender cannot be same")
 			amt=int(getExpiryFromTag(tok))
 			deleteTag(tok)
-			dtm=datetime.now(pytz.timezone('Asia/Calcutta')).strftime("%m/%d/%Y, %H:%M:%S")
+			dtm=datetime.now(pytz.timezone('Asia/Calcutta')).strftime("%Y/%m/%d, %H:%M:%S")
 			amt2=str(amt)
 			print(sender,"",dtm,receiver,amt2)
 			addFile(sender,"",dtm,receiver,amt2)
