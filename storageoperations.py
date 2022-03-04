@@ -1,7 +1,7 @@
 from azure.storage.blob import *
 from datetime import *
 
-connect_str='DefaultEndpointsProtocol=https;AccountName=paymentkeys;AccountKey=pxicg6JeqWm2FXDF1VXBfeiHM1LWrWDIN9IqvNDeaUw83v58Og8mr2Of5hUlbXoip6VNkqsWO0e366yhyaFHNw==;EndpointSuffix=core.windows.net'
+connect_str='DefaultEndpointsProtocol=https;AccountName=paymentkeys;AccountKey=pxicg6JeqWm2FXDF1VXBfeiHM1LWrWDIN9IqvNDeaUw83v58Og8mr2Of5hUlbXoip6VNkqsWO0e366yhyaFHNw==;EndpointSuffix=blob.core.windows.net'
 blob_service_client = BlobServiceClient.from_connection_string(connect_str)
 
 cryptocontainer=blob_service_client.get_container_client('cryptofiles')
